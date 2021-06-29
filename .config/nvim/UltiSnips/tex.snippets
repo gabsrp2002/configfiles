@@ -1,0 +1,62 @@
+snippet relatorio "Relatório de MC521"
+\\documentclass[a4paper]\{scrartcl}
+
+\\usepackage{gabriel}
+
+%% Paragraph indentation
+\\parconfig{0em}{0.5em}
+
+\\blackpdf{}
+
+\\title\{Relatório ${1:0} MC521}
+
+\\author\{Gabriel Ribeiro Paiva}
+\\date\{}
+
+\\begin\{document}
+\\maketitle
+\\section*\{Introdução}
+
+O contest que fiz para fazer esse relatório está \href\{${2:link}}\{nesse link}. Escolhi o \href\{$2/problem/${3:A}}\{problema $3} e o \href\{$2/problem/${4:B}}\{problema $4} para escrever nesse relatório e suas soluções estão nos arquivos `!p snip.rv="{}.cpp e {}.cpp.".format(t[3].lower(), t[4].lower())`
+
+Fiz esse contest junto com o Francisco Moreira e o Daniel Hosomi, então talvez eles também façam relatórios de alguma questão em comum.
+
+\\section*\{\href\{$2/problem/$3}{\\color{red}Problema $3}} 
+
+${0}
+
+\\section*\{\href\{$2/problem/$4}{\\color{red}Problema $4}} 
+
+\\end\{document}
+endsnippet
+
+
+snippet gtex "Default latex file"
+\\documentclass[a4paper]\{scrartcl}
+
+\\usepackage{gabriel}
+
+%% Paragraph indentation
+\\parconfig{0em}{0.5em}
+
+\\title\{${1:Title}}
+
+\\author\{Gabriel Ribeiro Paiva}
+\\date\{${2}}
+
+\\begin\{document}
+\\maketitle
+
+${0}
+
+\\end\{document}
+endsnippet
+
+
+snippet enum "Begins enumerate" bA
+\\begin\{enumerate}
+
+	\\item ${1}
+
+\\end\{enumerate}
+endsnippet

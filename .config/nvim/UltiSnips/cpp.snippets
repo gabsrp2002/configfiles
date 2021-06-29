@@ -1,0 +1,74 @@
+snippet cp1 "Template for cp with one case"
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define db cout << "Debug" << "\n"
+#define ll long long
+
+${1}
+
+int main() \{
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	cout.precision(${2});
+	cout.setf(ios::fixed);
+
+	${0}
+
+	return 0;
+}
+endsnippet
+
+
+snippet cp "Template for cp with some cases"
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define db cout << "Debug" << "\n"
+#define ll long long
+
+${1}
+
+int main() \{
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	cout.precision(${2});
+	cout.setf(ios::fixed);
+
+	int cases;
+	cin >> cases;
+	while (cases--) \{
+		${0}
+	}
+
+	return 0;
+}
+endsnippet
+
+
+snippet fori "Template for for loop" 
+for (int ${1:i} = ${2:0}; $1 ${3:< n}; $1${4:++}) \{
+	${0}
+}
+endsnippet
+
+
+snippet forin "Template for for in loop" 
+for (${1:auto} ${2:item} : ${3:arr}) \{
+	${0}
+}
+endsnippet
+
+
+snippet cout "Cout snippet" A
+cout << ${1} ${2:<< '\\n'};
+endsnippet
+
+
+snippet fcout "Cout with flush snippet" A
+cout << ${0} << endl;
+endsnippet
