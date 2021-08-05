@@ -12,15 +12,26 @@ Plugin 'SirVer/ultisnips'
 Plugin 'itchyny/lightline.vim'
 Plugin 'mg979/vim-visual-multi'
 
+" Surrounds
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+
+" Git!
+Plugin 'tpope/vim-fugitive'
+
 " Deoplete Plugins
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'tbodt/deoplete-tabnine'
 Plugin 'deoplete-plugins/deoplete-jedi'
-Plugin 'Shougo/deoplete-clangx'
-""""""
 
 " Xcode Colorscheme
 Plugin 'arzg/vim-colors-xcode'
 
 " Comment lines
 Plugin 'tpope/vim-commentary'
+
+" Search things
+Plugin 'kien/ctrlp.vim'
+
+" Linting
+Plugin 'dense-analysis/ale'

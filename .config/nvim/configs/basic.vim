@@ -17,8 +17,10 @@ au FocusGained,BufEnter * checktime
 let mapleader = "\<Space>"
 
 "Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>w :w!<CR>
 
+" Fast quit
+nmap <leader>q :q<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -158,17 +160,11 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-
-" Opens a new buffer 
-nnoremap <leader>q :e ~/buffer<cr>
-
-" Close all the buffers
-map <leader>ba :bufdo bd<cr>
-
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+" Moving text
+vnoremap <silent>J :m '>+1<CR>gv=gv
+vnoremap <silent>K :m '<-2<CR>gv=gv
+nnoremap <silent><leader>j :m .+1<CR>==
+nnoremap <silent><leader>k :m .-2<CR>==
 
 " Useful mappings for managing tabs
 map <silent> <leader>tn :tabnew<cr>
@@ -179,9 +175,6 @@ map <leader>tm :tabmove
 " Move between tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
-
-"Start a new tab from buffer
-nnoremap T <C-W><S-t>
 
 "Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
