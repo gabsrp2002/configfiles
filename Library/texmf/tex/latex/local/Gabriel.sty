@@ -1,0 +1,64 @@
+\ProvidesPackage{gabriel}
+
+%% Sets page size and margins
+\usepackage[a4paper,total={7in,10in}]{geometry} 
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{euler}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+% Glasses symbol
+\newcommand{\glasses}{%
+\begin{tikzpicture}%
+	\filldraw[black] (0ex,0ex) rectangle (1ex,1ex);%
+	\filldraw[black] (1ex, 0.5ex) rectangle (1.5ex, 0.75ex);% 
+	\filldraw[black] (1.5ex,0ex) rectangle (2.5ex,1ex);%
+	\filldraw[black] (0.08ex, 1.08ex) -- (1.33ex, 2.08ex) -- (1.58ex, 2.08ex) -- (0.33ex, 1.08ex) -- cycle;%
+	\filldraw[black] (2.27ex, 1.08ex) -- (3.52ex, 2.08ex) -- (3.77ex, 2.08ex) -- (2.52ex, 1.08ex) -- cycle;%
+\end{tikzpicture}%
+}
+
+\definecolor{linkBlue}{HTML}{00FFFF}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+    citecolor=black,      
+    urlcolor=linkBlue
+}
+
+%% Math symbols
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newcommand{\cc}{\mathbb C}
+\newcommand{\nn}{\mathbb N}
+\newcommand{\qq}{\mathbb Q}
+\newcommand{\rr}{\mathbb R}
+\newcommand{\zz}{\mathbb Z}
+\newcommand{\ff}{\mathbb F}
+\newcommand{\ee}{\mathbb E}
+\newcommand{\pp}{\mathbb P}
+
+
+\newcommand{\blackpdf}{
+    \pagecolor{black}
+    \color{white}
+    \renewcommand{\glasses}{%
+    \begin{tikzpicture}%
+        \filldraw[white] (0ex,0ex) rectangle (1ex,1ex);%
+        \filldraw[white] (1ex, 0.5ex) rectangle (1.5ex, 0.75ex);% 
+        \filldraw[white] (1.5ex,0ex) rectangle (2.5ex,1ex);%
+        \filldraw[white] (0.08ex, 1.08ex) -- (1.33ex, 2.08ex) -- (1.58ex, 2.08ex) -- (0.33ex, 1.08ex) -- cycle;%
+        \filldraw[white] (2.27ex, 1.08ex) -- (3.52ex, 2.08ex) -- (3.77ex, 2.08ex) -- (2.52ex, 1.08ex) -- cycle;%
+    \end{tikzpicture}%
+    }
+}
+
+\newcommand{\parconfig}[2]{
+    \setlength{\parindent}{#1}
+    \setlength{\parskip}{#2}
+}
