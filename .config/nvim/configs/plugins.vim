@@ -24,8 +24,9 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'tbodt/deoplete-tabnine'
 Plugin 'deoplete-plugins/deoplete-jedi'
 
-" Xcode Colorscheme
+" Colorschemes
 Plugin 'arzg/vim-colors-xcode'
+Plugin 'Mofiqul/dracula.nvim'
 
 " Comment lines
 Plugin 'tpope/vim-commentary'

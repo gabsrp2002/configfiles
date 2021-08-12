@@ -1,6 +1,6 @@
 " Compiles
 autocmd filetype cpp nnoremap <F12> :w <bar> :terminal g++-11 % -o %:r && ./%:r<CR>i
-autocmd filetype c nnoremap <F12> :w <bar> :terminal gcc % -o %:r && ./%:r<CR>i
+autocmd filetype c nnoremap <F12> :w <bar> :terminal make %:r && ./%:r<CR>i
 autocmd filetype python nnoremap <F12> :w <bar> :terminal python3 %<cr>i
 autocmd filetype tex nnoremap <F12> :w <bar> exec '!pdflatex '.shellescape('%').'; rm '.shellescape('%:r').'.log; rm '.shellescape('%:r').'.aux; rm '.shellescape('%:r').'.out; open -a preview '.shellescape('%:r').'.pdf'<CR><CR>
 
@@ -14,8 +14,8 @@ augroup remember_folds
   au BufWinEnter ?* silent! loadview 1
 augroup END
 
-"Ordena as linhas
-set nu
+"Set line numbers to be relative
+set nu rnu
 
 " Copys to clipboard
 set clipboard=unnamed
@@ -26,11 +26,6 @@ nnoremap <return> o
 
 " Gets out from (), {}, "", '', [], <> and maps in visual mode
 inoremap <C-l> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-" xnoremap ( <Esc>`>a)<Esc>`<i(<Esc>
-" xnoremap " <Esc>`>a"<Esc>`<i"<Esc>
-" xnoremap ' <Esc>`>a'<Esc>`<i'<Esc>
-" xnoremap [ <Esc>`>a]<Esc>`<i[<Esc>
-" xnoremap { <Esc>`>a}<Esc>`<i{<Esc>
 
 set nocompatible  
 

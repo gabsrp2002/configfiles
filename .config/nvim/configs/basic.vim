@@ -27,12 +27,6 @@ nmap <leader>q :q<CR>
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
-set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-
 " Turn on the Wild menu
 set wildmenu
 
@@ -99,7 +93,7 @@ syntax enable
 " Set colorscheme
 set termguicolors
 set t_Co=256
-colorscheme xcodedarkhc
+colorscheme dracula
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
