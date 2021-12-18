@@ -70,24 +70,25 @@ plugins=(git python zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # nvim alias
-alias vim="nvim"
+alias nvide="~/neovide/target/release/neovide && exit"
+alias vim="/opt/homebrew/Cellar/neovim/0.6.0/bin/nvim"
 alias viminit="cd ~/.config/nvim"
-alias vimbasic="nvim ~/.config/nvim/configs/basic.vim"
-alias vimconfig="nvim /Users/gabriel/.config/nvim/configs/my_configs.vim"
-alias vimplugins="nvim /Users/gabriel/.config/nvim/configs/plugins.vim"
-alias vimpluginsconfig="nvim /Users/gabriel/.config/nvim/configs/plugins_config.vim"
-alias vimfiletypes="nvim /Users/gabriel/.config/nvim/configs/filetypes.vim"
+alias vimbasic="vim ~/.config/nvim/configs/basic.vim"
+alias vimconfig="vim /Users/gabriel/.config/nvim/configs/my_configs.vim"
+alias vimplugins="vim /Users/gabriel/.config/nvim/configs/plugins.vim"
+alias vimpluginsconfig="vim /Users/gabriel/.config/nvim/configs/plugins_config.vim"
+alias vimfiletypes="vim /Users/gabriel/.config/nvim/configs/filetypes.vim"
 
 # zsh alias
 alias zshrun="source ~/.zshrc"
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Open with preview
 alias prev="open -a preview"
 
 # Latex alias
-alias latexstyle="nvim /Users/gabriel/Library/texmf/tex/latex/local/Gabriel.sty"
+alias latexstyle="vim /Users/gabriel/Library/texmf/tex/latex/local/Gabriel.sty"
 
 # config files repo
 alias config='/usr/bin/git --git-dir=$HOME/configfiles/ --work-tree=$HOME'
@@ -98,3 +99,7 @@ function acp() {
   git commit -m "$1"
   git push
 }
+
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/Applications/MacVim.app/Contents/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/opt/homebrew/bin:/opt/homebrew/bin
+export PATH="/usr/local/opt/util-linux/bin:$PATH"
+export PATH="/usr/local/opt/util-linux/sbin:$PATH"
