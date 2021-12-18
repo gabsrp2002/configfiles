@@ -7,23 +7,25 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
-\usepackage{euler}
 \usepackage{hyperref}
-\usepackage{tikz}
 \usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{ntheorem}
+\usepackage{array}
+\usepackage{enumitem}
 
 % Glasses symbol
-\newcommand{\glasses}{%
-\begin{tikzpicture}%
-	\filldraw[black] (0ex,0ex) rectangle (1ex,1ex);%
-	\filldraw[black] (1ex, 0.5ex) rectangle (1.5ex, 0.75ex);% 
-	\filldraw[black] (1.5ex,0ex) rectangle (2.5ex,1ex);%
-	\filldraw[black] (0.08ex, 1.08ex) -- (1.33ex, 2.08ex) -- (1.58ex, 2.08ex) -- (0.33ex, 1.08ex) -- cycle;%
-	\filldraw[black] (2.27ex, 1.08ex) -- (3.52ex, 2.08ex) -- (3.77ex, 2.08ex) -- (2.52ex, 1.08ex) -- cycle;%
-\end{tikzpicture}%
+\newcommand{\glasses}{
+\begin{tikzpicture}
+	\filldraw[black] (0ex,0ex) rectangle (1ex,1ex);
+	\filldraw[black] (1ex, 0.5ex) rectangle (1.5ex, 0.75ex);
+	\filldraw[black] (1.5ex,0ex) rectangle (2.5ex,1ex);
+	\filldraw[black] (0.08ex, 1.08ex) -- (1.33ex, 2.08ex) -- (1.58ex, 2.08ex) -- (0.33ex, 1.08ex) -- cycle;
+	\filldraw[black] (2.27ex, 1.08ex) -- (3.52ex, 2.08ex) -- (3.77ex, 2.08ex) -- (2.52ex, 1.08ex) -- cycle;
+\end{tikzpicture}
 }
 
-\definecolor{linkBlue}{HTML}{00FFFF}
+\definecolor{linkBlue}{HTML}{4DA6FF}
 \hypersetup{
 	colorlinks=true,
 	linkcolor=blue,
@@ -31,6 +33,17 @@
     citecolor=black,      
     urlcolor=linkBlue
 }
+
+\theoremseparator{.}
+\newtheorem{thm}{Teorema}
+\theorembodyfont{\upshape}
+\newtheorem{lem}{Lema}
+\newtheorem*{defi}{Definição}
+\newtheorem{prob}{Problema}
+
+\theoremstyle{definition}
+\newtheorem*{prob**}{Problema}
+\newtheorem*{sol}{Solução}
 
 %% Math symbols
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
