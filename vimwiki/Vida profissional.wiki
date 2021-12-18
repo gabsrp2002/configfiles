@@ -1,0 +1,3 @@
+= URGENTES!!! =
+
+* Terminar o projeto [[vfile:~/treino-pandas.py]]
