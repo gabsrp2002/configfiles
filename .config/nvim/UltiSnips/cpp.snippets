@@ -1,11 +1,13 @@
 extends c
 
 snippet cp1 "Template for cp with one case"
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-#define db cout << "Debug" << "\n"
+#define db          \\
+	cout << "Debug" \\
+		 << "\\n"
 #define ll long long
 
 ${1}
@@ -25,11 +27,13 @@ endsnippet
 
 
 snippet cp "Template for cp with some cases"
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-#define db cout << "Debug" << "\n"
+#define db          \\
+	cout << "Debug" \\
+		 << "\\n"
 #define ll long long
 
 ${1}
@@ -59,11 +63,26 @@ for (${1:auto} ${2:item} : ${3:arr}) \{
 endsnippet
 
 
+snippet lcout "Inline cout snippet" A
+cout << $1 << ' ';
+endsnippet
+
+
+snippet scout "Simple cout snippet" A
+cout << $1;
+endsnippet
+
+
 snippet cout "Cout snippet" A
-cout << ${1} ${2:<< '\\n'};
+cout << $1 << '\\n';
 endsnippet
 
 
 snippet fcout "Cout with flush snippet" A
-cout << ${0} << endl;
+cout << $1 << endl;
+endsnippet
+
+
+snippet cin "Cin snippet" A
+cin >> $1;
 endsnippet

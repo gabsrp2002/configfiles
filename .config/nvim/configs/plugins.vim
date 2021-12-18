@@ -27,6 +27,8 @@ Plugin 'deoplete-plugins/deoplete-jedi'
 " Colorschemes
 Plugin 'arzg/vim-colors-xcode'
 Plugin 'Mofiqul/dracula.nvim'
+Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'markvincze/panda-vim'
 
 " Comment lines
 Plugin 'tpope/vim-commentary'
@@ -36,3 +38,8 @@ Plugin 'kien/ctrlp.vim'
 
 " Linting
 Plugin 'dense-analysis/ale'
+
+" Debbuging
+Plugin 'puremourning/vimspector'
+
+Plugin 'vimwiki/vimwiki'

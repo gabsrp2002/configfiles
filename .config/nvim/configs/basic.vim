@@ -17,7 +17,7 @@ au FocusGained,BufEnter * checktime
 let mapleader = "\<Space>"
 
 "Fast saving
-nmap <leader>w :w!<CR>
+nmap <leader><Space> :w!<CR>
 
 " Fast quit
 nmap <leader>q :q<CR>
@@ -93,7 +93,8 @@ syntax enable
 " Set colorscheme
 set termguicolors
 set t_Co=256
-colorscheme dracula
+colorscheme onedark
+set background=dark
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -182,6 +183,13 @@ map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Splits better
+set splitbelow
+set splitright
+
+" Opens a terminal
+nnoremap <silent><leader>tt :split term://zsh<CR> :res 8<CR>i
 
 " Specify the behavior when switching between buffers 
 try

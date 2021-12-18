@@ -2,13 +2,13 @@ snippet relatorio "Relatório de MC521"
 \\documentclass[a4paper]\{scrartcl}
 
 \\usepackage{gabriel}
+\\usepackage{euler}
+\\usepackage{indentfirst}
 
 %% Paragraph indentation
-\\parconfig{0em}{0.5em}
+\\parconfig{1cm}{0.5em}
 
-\\blackpdf{}
-
-\\title\{Relatório ${1:0} MC521}
+\\title\{Relatório ${1:0} MC621}
 
 \\author\{Gabriel Ribeiro Paiva}
 \\date\{}
@@ -17,9 +17,9 @@ snippet relatorio "Relatório de MC521"
 \\maketitle
 \\section*\{Introdução}
 
-O contest que fiz para fazer esse relatório está \href\{${2:link}}\{nesse link}. Escolhi o \href\{$2/problem/${3:A}}\{problema $3} e o \href\{$2/problem/${4:B}}\{problema $4} para escrever nesse relatório e suas soluções estão nos arquivos `!p snip.rv="{}.cpp e {}.cpp.".format(t[3].lower(), t[4].lower())`
+O contest que fiz para fazer esse relatório está \href\{${2}}\{nesse link}. Escolhi o \href\{$2/problem/${3:A}}\{problema $3} e o \href\{$2/problem/${4:B}}\{problema $4} para escrever e suas soluções estão nos arquivos `!p snip.rv="{}.cpp e {}.cpp.".format(t[3].lower(), t[4].lower())`
 
-Fiz esse contest junto com o Francisco Moreira e o Daniel Hosomi, então talvez eles também façam relatórios de alguma questão em comum.
+Fiz esse contest junto com o Tales Nicoletti e o Daniel Hosomi, então talvez eles também façam relatórios de alguma questão em comum.
 
 \\section*\{\href\{$2/problem/$3}{\\color{red}Problema $3}} 
 
@@ -35,6 +35,7 @@ snippet gtex "Default latex file"
 \\documentclass[a4paper]\{scrartcl}
 
 \\usepackage{gabriel}
+\\usepackage{euler}
 
 %% Paragraph indentation
 \\parconfig{0em}{0.5em}
@@ -59,4 +60,115 @@ snippet enum "Begins enumerate" bA
 	\\item ${1}
 
 \\end\{enumerate}
+endsnippet
+
+
+snippet F129 "Relatório de F129"
+\\documentclass[12pt]\{article}
+
+\\usepackage\{gabriel}
+\\usepackage\{geometry}
+\\usepackage\{newtxtext,newtxmath}
+\\usepackage{dirtytalk}
+
+\\geometry\{a4paper, left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
+
+%% Paragraph indentation
+\\parconfig\{0em}\{0em}
+
+\\begin\{document}
+
+	\\textbf\{${1}} \\\\
+	Gabriel Ribeiro Paiva,  \\\\ 
+	RA:223475, turma J F129 
+
+	\\textbf\{Introdução:} $2
+
+	\\textbf\{Objetivo:} $3
+
+	\\textbf\{Materiais e métodos:} $4
+
+	\\textbf\{Discussão:} $5
+
+	\\textbf\{Conclusão:} $6
+
+	\\textbf\{Referência:} $7
+
+	\\pagebreak
+
+	\\begin\{center}
+
+		\\textbf\{\Large Figuras e Tabelas do relatório \\say{$1}}
+
+	\\end\{center}
+
+	$0
+
+\\end\{document}
+endsnippet
+
+
+snippet prob "Begins problem statement" bA
+\\begin\{prob}
+
+	$1
+
+\\end\{prob}
+endsnippet
+
+
+snippet thm "Begins theorem statement" bA
+\\begin\{thm}
+
+	$1
+
+\\end\{thm}
+endsnippet
+
+
+snippet sol "Begins solve statement" bA
+\\begin\{sol}
+
+	$1
+
+\\end\{sol}
+endsnippet
+
+
+snippet lem "Begins lema statement" bA
+\\begin\{lem}
+
+	$1
+
+\\end\{lem}
+endsnippet
+
+
+snippet atividadeF129 "Begins F129" bA
+\\documentclass[12pt]\{article}
+
+\\usepackage\{gabriel}
+\\usepackage\{geometry}
+\\usepackage\{newtxtext,newtxmath}
+\\usepackage\{dirtytalk}
+\\usepackage\{graphicx}
+\\graphicspath\{\{./}}
+
+\\geometry\{a4paper, left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
+
+%% Paragraph indentation
+\\parconfig\{0em}\{0em}
+
+\\title\{Atividade $1 \\\\ Questão 8}
+\\author\{Gabriel Ribeiro Paiva}
+\\date\{}
+
+\\begin\{document}
+\\maketitle
+
+\\begin\{enumerate}
+
+\\end\{enumerate}
+
+\\end\{document}
 endsnippet
