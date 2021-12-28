@@ -70,19 +70,12 @@ plugins=(git python zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # nvim alias
-alias nvide="~/neovide/target/release/neovide && exit"
+alias nvide="~/neovide/target/release/neovide"
 alias vim="/opt/homebrew/Cellar/neovim/0.6.0/bin/nvim"
 alias viminit="cd ~/.config/nvim"
-alias vimbasic="vim ~/.config/nvim/configs/basic.vim"
-alias vimconfig="vim /Users/gabriel/.config/nvim/configs/my_configs.vim"
-alias vimplugins="vim /Users/gabriel/.config/nvim/configs/plugins.vim"
-alias vimpluginsconfig="vim /Users/gabriel/.config/nvim/configs/plugins_config.vim"
-alias vimfiletypes="vim /Users/gabriel/.config/nvim/configs/filetypes.vim"
 
 # zsh alias
 alias zshrun="source ~/.zshrc"
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Open with preview
 alias prev="open -a preview"
@@ -100,6 +93,4 @@ function acp() {
   git push
 }
 
-export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/Applications/MacVim.app/Contents/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/opt/homebrew/bin:/opt/homebrew/bin
-export PATH="/usr/local/opt/util-linux/bin:$PATH"
-export PATH="/usr/local/opt/util-linux/sbin:$PATH"
+export PATH=/Users/gabriel/.local/share/nvim/lsp_servers:/opt/homebrew/bin:/opt/homebrew/sbin:/Applications/MacVim.app/Contents/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/opt/homebrew/bin:/opt/homebrew/bin
