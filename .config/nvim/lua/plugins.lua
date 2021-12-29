@@ -125,7 +125,7 @@ return require('packer').startup(function()
 
             -- Setup lspconfig.
             local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-            local servers = {'sumneko_lua', 'pyright', 'clangd'}
+            local servers = {'sumneko_lua', 'pyright', 'clangd', 'texlab'}
             for _, server in ipairs(servers) do
                 require('lspconfig')[server].setup {
                     capabilities = capabilities
