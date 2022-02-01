@@ -13,6 +13,9 @@ keymap('n', '0', '^', {})
 -- Exit terminal mode faster
 keymap('t', '<Esc>', '<c-\\><c-n>', {})
 
+-- Exits insert mode quickly
+keymap('i', 'jk', '<Esc>', {})
+
 local opts = {noremap = true}
 
 -- Getting out of surroundings fast
@@ -31,9 +34,6 @@ keymap('n', '<S-Tab>', 'gT', opts)
 -- Gives meaning to <return> in normal mode
 keymap('n', '<return>', 'o', opts)
 
--- Adds space in normal mode
-keymap('n', 'ss', 'i<space><esc>l', opts)
-
 opts = {noremap = true, silent = true}
 
 -- Disable highlight faster
@@ -41,3 +41,6 @@ keymap('n', '<leader><CR>', ':noh<CR>', opts)
 
 -- Opens a small terminal below the current buffer
 keymap('n', '<leader>tt', ':split term://zsh<CR> :res 8<CR>i', opts)
+
+-- Opens link in default browser
+keymap('n', '<leader>of', 'gf:!open %<CR><CR><C-o>', opts)

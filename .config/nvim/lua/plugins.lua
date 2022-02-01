@@ -2,6 +2,8 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Useful plugins
+    use 'ggandor/lightspeed.nvim'
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
@@ -202,6 +204,7 @@ return require('packer').startup(function()
 
     -- Tree-sitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
+        requires = 'p00f/nvim-ts-rainbow',
         config = function()
             local configs = require'nvim-treesitter.configs'
             configs.setup {
