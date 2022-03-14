@@ -71,7 +71,7 @@ source $ZSH/oh-my-zsh.sh
 
 # nvim alias
 alias nvide="~/neovide/target/release/neovide"
-alias vim="/opt/homebrew/Cellar/neovim/0.6.0/bin/nvim"
+alias vim="nvim"
 alias viminit="cd ~/.config/nvim"
 
 # zsh alias
@@ -79,9 +79,6 @@ alias zshrun="source ~/.zshrc"
 
 # Open with preview
 alias prev="open -a preview"
-
-# Latex alias
-alias latexstyle="vim /Users/gabriel/Library/texmf/tex/latex/local/Gabriel.sty"
 
 # config files repo
 alias config='/usr/bin/git --git-dir=$HOME/configfiles/ --work-tree=$HOME'

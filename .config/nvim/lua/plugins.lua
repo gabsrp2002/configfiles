@@ -226,6 +226,7 @@ return require('packer').startup(function()
         end
     }
 
+    -- Alpha
     use { 'goolord/alpha-nvim',
         requires = { 'kyazdani42/nvim-web-devicons' },
         config = function ()
@@ -241,5 +242,18 @@ return require('packer').startup(function()
             }
             vim.api.nvim_set_keymap('n', '<leader>aa', ':Alpha<cr>', {noremap = true})
         end
+    }
+
+    -- Jupyter notebook integration
+    use {
+      "ahmedkhalf/jupyter-nvim",
+      run = ":UpdateRemotePlugins",
+      config = function()
+        require("jupyter-nvim").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
     }
 end)

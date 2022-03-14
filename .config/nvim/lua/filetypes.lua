@@ -12,7 +12,7 @@ vim.cmd [[
     au BufRead,BufNewFile *.tex set filetype=tex
     au BufRead,BufNewFile *.tex let g:AutoPairs =  {'$':'$', '(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''"}
     au BufRead,BufNewFile *.tex inoremap <C-l> <Esc>/[)}"'\]>\$]<CR>:nohl<CR>a
-    autocmd filetype tex nnoremap <F12> :w <bar> exec '!pdflatex '.shellescape('%').'; rm '.shellescape('%:r').'.log; rm '.shellescape('%:r').'.aux; rm '.shellescape('%:r').'.out; open -a preview '.shellescape('%:r').'.pdf'<CR><CR>
+    autocmd filetype tex nnoremap <F12> :w <bar> exec '!pdflatex '.shellescape('%').'; rm '.shellescape('%:r').'.log; rm '.shellescape('%:r').'.aux; rm '.shellescape('%:r').'.out; rm '.shellescape('%:r').'.thm; open -a preview '.shellescape('%:r').'.pdf'<CR><CR>
     autocmd filetype tex nnoremap <F10> :w <bar> exec '!python3 ~/automations/get_tex_comments.py < '.shellescape('%').' > ref_'.shellescape('%:r').'.txt'<CR><CR>:vsplit ref_%:r.txt<CR>:vertical res 45<CR>
 ]]
 
