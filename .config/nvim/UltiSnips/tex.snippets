@@ -1,4 +1,4 @@
-snippet relatorio "Relatório de MC521"
+snippet relatorio "Relatório de MC721"
 \\documentclass[a4paper]\{scrartcl}
 
 \\usepackage{gabriel}
@@ -6,9 +6,9 @@ snippet relatorio "Relatório de MC521"
 \\usepackage{indentfirst}
 
 %% Paragraph indentation
-\\parconfig{1cm}{0.5em}
+\\parconfig{0.5cm}{0.2em}
 
-\\title\{Relatório ${1:0} MC621}
+\\title\{Relatório `!p snip.rv = fn[-5]` MC721}
 
 \\author\{Gabriel Ribeiro Paiva}
 \\date\{}
@@ -19,7 +19,7 @@ snippet relatorio "Relatório de MC521"
 
 O contest que fiz para fazer esse relatório está \href\{${2}}\{nesse link}. Escolhi o \href\{$2/problem/${3:A}}\{problema $3} e o \href\{$2/problem/${4:B}}\{problema $4} para escrever e suas soluções estão nos arquivos `!p snip.rv="{}.cpp e {}.cpp.".format(t[3].lower(), t[4].lower())`
 
-Fiz esse contest junto com o Tales Nicoletti e o Daniel Hosomi, então talvez eles também façam relatórios de alguma questão em comum.
+Fiz esse contest junto com o Matheus Henrique e o Daniel Hosomi, então talvez eles também façam relatórios de alguma questão em comum.
 
 \\section*\{\href\{$2/problem/$3}{\\color{red}Problema $3}} 
 
@@ -62,52 +62,6 @@ snippet enum "Begins enumerate" bA
 \\end\{enumerate}
 endsnippet
 
-
-snippet F129 "Relatório de F129"
-\\documentclass[12pt]\{article}
-
-\\usepackage\{gabriel}
-\\usepackage\{geometry}
-\\usepackage\{newtxtext,newtxmath}
-\\usepackage{dirtytalk}
-
-\\geometry\{a4paper, left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
-
-%% Paragraph indentation
-\\parconfig\{0em}\{0em}
-
-\\begin\{document}
-
-	\\textbf\{${1}} \\\\
-	Gabriel Ribeiro Paiva,  \\\\ 
-	RA:223475, turma J F129 
-
-	\\textbf\{Introdução:} $2
-
-	\\textbf\{Objetivo:} $3
-
-	\\textbf\{Materiais e métodos:} $4
-
-	\\textbf\{Discussão:} $5
-
-	\\textbf\{Conclusão:} $6
-
-	\\textbf\{Referência:} $7
-
-	\\pagebreak
-
-	\\begin\{center}
-
-		\\textbf\{\Large Figuras e Tabelas do relatório \\say{$1}}
-
-	\\end\{center}
-
-	$0
-
-\\end\{document}
-endsnippet
-
-
 snippet prob "Begins problem statement" bA
 \\begin\{prob}
 
@@ -143,32 +97,10 @@ snippet lem "Begins lema statement" bA
 \\end\{lem}
 endsnippet
 
+snippet env "Starts an enviroment"
+\\begin\{${VISUAL}}
 
-snippet atividadeF129 "Begins F129" bA
-\\documentclass[12pt]\{article}
+	$0
 
-\\usepackage\{gabriel}
-\\usepackage\{geometry}
-\\usepackage\{newtxtext,newtxmath}
-\\usepackage\{dirtytalk}
-\\usepackage\{graphicx}
-\\graphicspath\{\{./}}
-
-\\geometry\{a4paper, left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
-
-%% Paragraph indentation
-\\parconfig\{0em}\{0em}
-
-\\title\{Atividade $1 \\\\ Questão 8}
-\\author\{Gabriel Ribeiro Paiva}
-\\date\{}
-
-\\begin\{document}
-\\maketitle
-
-\\begin\{enumerate}
-
-\\end\{enumerate}
-
-\\end\{document}
+\\end\{${VISUAL}}
 endsnippet
